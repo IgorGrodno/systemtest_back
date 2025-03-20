@@ -1,17 +1,14 @@
 package com.example.systemstest;
 
-import authentication.model.ERole;
-import authentication.model.Role;
-import authentication.model.User;
-import authentication.payload.repository.RoleRepository;
-import authentication.payload.repository.UserRepository;
+import com.example.systemstest.authentication.model.ERole;
+import com.example.systemstest.authentication.model.Role;
+import com.example.systemstest.authentication.model.User;
+import com.example.systemstest.authentication.payload.repository.RoleRepository;
+import com.example.systemstest.authentication.payload.repository.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.HashSet;
@@ -19,9 +16,6 @@ import java.util.Optional;
 import java.util.Set;
 
 @SpringBootApplication
-@ComponentScan(basePackages = "authentication")
-@EnableJpaRepositories(basePackages = "authentication.payload.repository")
-@EntityScan(basePackages = "authentication.model")
 public class SystemsTestApplication {
 
     public static void main(String[] args) {

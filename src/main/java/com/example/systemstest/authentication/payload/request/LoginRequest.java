@@ -1,4 +1,4 @@
-package authentication.payload.request;
+package com.example.systemstest.authentication.payload.request;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package authentication.payload.response;
+package com.example.systemstest.authentication.payload.response;
 
 import lombok.Getter;
 

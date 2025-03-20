@@ -1,7 +1,7 @@
-package authentication.payload.repository;
+package com.example.systemstest.authentication.payload.repository;
 
 
-import authentication.model.User;
+import com.example.systemstest.authentication.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

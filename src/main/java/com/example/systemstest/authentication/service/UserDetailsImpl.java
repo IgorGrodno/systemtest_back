@@ -1,4 +1,4 @@
-package authentication.service;
+package com.example.systemstest.authentication.service;
 
 import java.io.Serial;
 import java.util.Collection;
@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-import authentication.model.User;
+import com.example.systemstest.authentication.model.User;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

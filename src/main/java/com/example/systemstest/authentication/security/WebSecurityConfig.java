@@ -1,7 +1,7 @@
-package authentication.security;
-import authentication.security.jwt.AuthEntryPointJwt;
-import authentication.security.jwt.AuthTokenFilter;
-import authentication.service.UserDetailsServiceImpl;
+package com.example.systemstest.authentication.security;
+import com.example.systemstest.authentication.security.jwt.AuthEntryPointJwt;
+import com.example.systemstest.authentication.security.jwt.AuthTokenFilter;
+import com.example.systemstest.authentication.service.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -63,20 +63,15 @@ public class WebSecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable)
-                .exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler))
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .authorizeHttpRequests(auth ->
-                        auth.requestMatchers("/api/auth/**").permitAll()
-                                .requestMatchers("/api/**").permitAll()
-                                .anyRequest().authenticated()
-                );
-
-
-        http.headers(headers -> headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin));
-
-        http.authenticationProvider(authenticationProvider());
-
-        http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
+                .exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler))
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/api/auth/**").permitAll()
+                        .anyRequest().authenticated()
+                )
+                .headers(headers -> headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin))
+                .authenticationProvider(authenticationProvider())
+                .addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }

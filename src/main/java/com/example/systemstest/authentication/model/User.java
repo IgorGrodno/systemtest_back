@@ -1,4 +1,4 @@
-package authentication.model;
+package com.example.systemstest.authentication.model;
 
 
 import jakarta.persistence.*;

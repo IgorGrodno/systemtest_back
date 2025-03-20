@@ -1,8 +1,8 @@
-package authentication.service;
+package com.example.systemstest.authentication.service;
 
 
-import authentication.model.User;
-import authentication.payload.repository.UserRepository;
+import com.example.systemstest.authentication.model.User;
+import com.example.systemstest.authentication.payload.repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

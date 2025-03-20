@@ -1,4 +1,4 @@
-package authentication.payload.request;
+package com.example.systemstest.authentication.payload.request;
 
 import java.util.Set;
 

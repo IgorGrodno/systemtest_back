@@ -1,9 +1,9 @@
-package authentication.security.jwt;
+package com.example.systemstest.authentication.security.jwt;
 
 import java.io.IOException;
 
 
-import authentication.service.UserDetailsServiceImpl;
+import com.example.systemstest.authentication.service.UserDetailsServiceImpl;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -48,7 +48,7 @@ public class AuthTokenFilter extends OncePerRequestFilter {
                 SecurityContextHolder.getContext().setAuthentication(authentication);
             }
         } catch (Exception e) {
-            logger.error("Cannot set user authentication: {}", e);
+            logger.error("Cannot set user com.example.systemstest.authentication: {}", e);
         }
 
         filterChain.doFilter(request, response);

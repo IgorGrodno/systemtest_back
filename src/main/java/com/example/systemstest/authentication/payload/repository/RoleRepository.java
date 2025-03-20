@@ -1,7 +1,7 @@
-package authentication.payload.repository;
+package com.example.systemstest.authentication.payload.repository;
 
-import authentication.model.ERole;
-import authentication.model.Role;
+import com.example.systemstest.authentication.model.ERole;
+import com.example.systemstest.authentication.model.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,10 +1,10 @@
-package authentication.security.jwt;
+package com.example.systemstest.authentication.security.jwt;
 
 import java.security.Key;
 import java.util.Date;
 
 
-import authentication.service.UserDetailsImpl;
+import com.example.systemstest.authentication.service.UserDetailsImpl;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 
