@@ -2,6 +2,10 @@
 
 
 spring.datasource.url=jdbc:postgresql://localhost:5432/systemstest_db
+
 spring.datasource.driver-class-name=org.postgresql.Driver
+
 spring.datasource.username=systemstest_username
+
 spring.datasource.password=systemstest_password
+
