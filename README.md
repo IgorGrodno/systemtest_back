@@ -1,4 +1,4 @@
-приложение ожидает базу данных с параметрами ниже, таблицы и данные создадуться при первом запуске, по ссылке https://github.com/IgorGrodno/https---github.com-IgorGrodno-systemstest_front есть фронт на ангуляре, чтоб токен руками не передавать
+приложение ожидает базу данных с параметрами ниже, таблицы и данные создадутся при первом запуске, по ссылке https://github.com/IgorGrodno/https---github.com-IgorGrodno-systemstest_front есть фронт на ангуляре, чтоб токен руками не передавать
 
 
 spring.datasource.url=jdbc:postgresql://localhost:5432/systemstest_db
